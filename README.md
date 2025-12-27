@@ -90,4 +90,4 @@ All 200+ OpenRouter models are available via search.
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+GNU General Public License v3.0 - see [LICENSE](LICENSE) for details.
