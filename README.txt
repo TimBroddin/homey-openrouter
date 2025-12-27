@@ -1,1 +1,1 @@
-Adds LLM support for OpenRouter.
+Generate text using AI models from OpenAI, Anthropic, Google, and more via OpenRouter.
