@@ -1,1 +1,1 @@
-Generate text using AI models from OpenAI, Anthropic, Google, and more via OpenRouter.
+Generate text using AI models from OpenAI, Anthropic, Google, and more via OpenRouter. Use powerful language models in your Homey flows to create dynamic responses, summaries, and smart notifications. Simply add your OpenRouter API key and start building AI-powered automations.
