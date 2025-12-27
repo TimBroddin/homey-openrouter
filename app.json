@@ -1,0 +1,261 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "be.titansofindustry.openrouter",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "OpenRouter"
+  },
+  "description": {
+    "en": "Generate text using AI models from OpenAI, Anthropic, Google, and more via OpenRouter."
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Tim Broddin",
+    "email": "tim@wannabes.be"
+  },
+  "brandColor": "#6366F1",
+  "source": "https://github.com/timbroddin/homey-openrouter/",
+  "support": "mailto:tim@broddin.be",
+  "bugs": {
+    "url": "https://github.com/timbroddin/homey-openrouter/issues"
+  },
+  "flow": {
+    "actions": [
+      {
+        "title": {
+          "en": "Generate text"
+        },
+        "titleFormatted": {
+          "en": "Generate text with [[model]] using prompt [[prompt]]"
+        },
+        "hint": {
+          "en": "Generate text using OpenRouter API. The result is available as a token."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=openrouter"
+          },
+          {
+            "type": "autocomplete",
+            "name": "model",
+            "title": {
+              "en": "Model"
+            },
+            "placeholder": {
+              "en": "Search for a model..."
+            }
+          },
+          {
+            "type": "text",
+            "name": "prompt",
+            "title": {
+              "en": "Prompt"
+            },
+            "placeholder": {
+              "en": "Enter your prompt here..."
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "response",
+            "type": "string",
+            "title": {
+              "en": "Response"
+            },
+            "example": {
+              "en": "Hello! I'm an AI assistant."
+            }
+          }
+        ],
+        "id": "generate_text"
+      },
+      {
+        "title": {
+          "en": "Generate text with context"
+        },
+        "titleFormatted": {
+          "en": "Generate text with [[model]] using context [[system_prompt]] and prompt [[prompt]]"
+        },
+        "hint": {
+          "en": "Generate text with a system prompt for context (e.g., 'You are a helpful home assistant'). The result is available as a token."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=openrouter"
+          },
+          {
+            "type": "autocomplete",
+            "name": "model",
+            "title": {
+              "en": "Model"
+            },
+            "placeholder": {
+              "en": "Search for a model..."
+            }
+          },
+          {
+            "type": "text",
+            "name": "system_prompt",
+            "title": {
+              "en": "Context / System Prompt"
+            },
+            "placeholder": {
+              "en": "You are a friendly home assistant..."
+            }
+          },
+          {
+            "type": "text",
+            "name": "prompt",
+            "title": {
+              "en": "Prompt"
+            },
+            "placeholder": {
+              "en": "Enter your prompt here..."
+            }
+          }
+        ],
+        "tokens": [
+          {
+            "name": "response",
+            "type": "string",
+            "title": {
+              "en": "Response"
+            },
+            "example": {
+              "en": "Hello! I'm an AI assistant."
+            }
+          }
+        ],
+        "id": "generate_with_context"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "OpenRouter"
+      },
+      "class": "other",
+      "capabilities": [
+        "openrouter_credits",
+        "openrouter_status"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/openrouter/assets/images/small.png",
+        "large": "/drivers/openrouter/assets/images/large.png",
+        "xlarge": "/drivers/openrouter/assets/images/xlarge.png"
+      },
+      "pair": [
+        {
+          "id": "api_key",
+          "template": "login_credentials",
+          "options": {
+            "title": {
+              "en": "OpenRouter API Key"
+            },
+            "usernameLabel": {
+              "en": "API Key"
+            },
+            "usernamePlaceholder": {
+              "en": "sk-or-v1-..."
+            },
+            "passwordLabel": {
+              "en": "Default Model (optional)"
+            },
+            "passwordPlaceholder": {
+              "en": "google/gemini-3-flash-preview"
+            }
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "id": "apiKey",
+          "type": "password",
+          "label": {
+            "en": "API Key"
+          },
+          "value": "",
+          "hint": {
+            "en": "Your OpenRouter API key (starts with sk-or-v1-)"
+          }
+        },
+        {
+          "id": "defaultModel",
+          "type": "text",
+          "label": {
+            "en": "Default Model"
+          },
+          "value": "google/gemini-3-flash-preview",
+          "hint": {
+            "en": "The default model to use when none is specified"
+          }
+        }
+      ],
+      "id": "openrouter"
+    }
+  ],
+  "capabilities": {
+    "openrouter_credits": {
+      "type": "number",
+      "title": {
+        "en": "Credits Remaining"
+      },
+      "units": {
+        "en": "$"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_credits.svg",
+      "decimals": 2,
+      "insights": true
+    },
+    "openrouter_status": {
+      "type": "boolean",
+      "title": {
+        "en": "API Status"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor",
+      "icon": "/assets/capability_status.svg",
+      "insights": false
+    }
+  }
+}

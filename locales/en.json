@@ -1,0 +1,16 @@
+{
+  "drivers": {
+    "openrouter": {
+      "pair": {
+        "api_key": {
+          "title": "Enter your OpenRouter API Key"
+        }
+      }
+    }
+  },
+  "errors": {
+    "invalid_api_key": "Invalid API key",
+    "api_request_failed": "API request failed",
+    "no_response": "No response from API"
+  }
+}

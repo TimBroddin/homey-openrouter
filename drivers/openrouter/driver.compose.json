@@ -1,0 +1,79 @@
+{
+  "name": {
+    "en": "OpenRouter"
+  },
+  "class": "other",
+  "capabilities": [
+    "openrouter_credits",
+    "openrouter_status"
+  ],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "cloud"
+  ],
+  "images": {
+    "small": "/drivers/openrouter/assets/images/small.png",
+    "large": "/drivers/openrouter/assets/images/large.png",
+    "xlarge": "/drivers/openrouter/assets/images/xlarge.png"
+  },
+  "pair": [
+    {
+      "id": "api_key",
+      "template": "login_credentials",
+      "options": {
+        "title": {
+          "en": "OpenRouter API Key"
+        },
+        "usernameLabel": {
+          "en": "API Key"
+        },
+        "usernamePlaceholder": {
+          "en": "sk-or-v1-..."
+        },
+        "passwordLabel": {
+          "en": "Default Model (optional)"
+        },
+        "passwordPlaceholder": {
+          "en": "google/gemini-3-flash-preview"
+        }
+      }
+    },
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "settings": [
+    {
+      "id": "apiKey",
+      "type": "password",
+      "label": {
+        "en": "API Key"
+      },
+      "value": "",
+      "hint": {
+        "en": "Your OpenRouter API key (starts with sk-or-v1-)"
+      }
+    },
+    {
+      "id": "defaultModel",
+      "type": "text",
+      "label": {
+        "en": "Default Model"
+      },
+      "value": "google/gemini-3-flash-preview",
+      "hint": {
+        "en": "The default model to use when none is specified"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "boolean",
+  "title": {
+    "en": "API Status"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_status.svg",
+  "insights": false
+}

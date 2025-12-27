@@ -1,0 +1,34 @@
+{
+  "id": "be.titansofindustry.openrouter",
+  "version": "1.0.0",
+  "compatibility": ">=12.4.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "OpenRouter"
+  },
+  "description": {
+    "en": "Generate text using AI models from OpenAI, Anthropic, Google, and more via OpenRouter."
+  },
+  "category": [
+    "internet"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Tim Broddin",
+    "email": "tim@wannabes.be"
+  },
+  "brandColor": "#6366F1",
+  "source": "https://github.com/timbroddin/homey-openrouter/",
+  "support": "mailto:tim@broddin.be",
+  "bugs": {
+    "url": "https://github.com/timbroddin/homey-openrouter/issues"
+  }
+}

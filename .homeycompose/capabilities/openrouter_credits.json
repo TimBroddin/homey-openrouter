@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Credits Remaining"
+  },
+  "units": {
+    "en": "$"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/capability_credits.svg",
+  "decimals": 2,
+  "insights": true
+}

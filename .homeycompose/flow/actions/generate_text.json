@@ -1,0 +1,50 @@
+{
+  "title": {
+    "en": "Generate text"
+  },
+  "titleFormatted": {
+    "en": "Generate text with [[model]] using prompt [[prompt]]"
+  },
+  "hint": {
+    "en": "Generate text using OpenRouter API. The result is available as a token."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=openrouter"
+    },
+    {
+      "type": "autocomplete",
+      "name": "model",
+      "title": {
+        "en": "Model"
+      },
+      "placeholder": {
+        "en": "Search for a model..."
+      }
+    },
+    {
+      "type": "text",
+      "name": "prompt",
+      "title": {
+        "en": "Prompt"
+      },
+      "placeholder": {
+        "en": "Enter your prompt here..."
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "name": "response",
+      "type": "string",
+      "title": {
+        "en": "Response"
+      },
+      "example": {
+        "en": "Hello! I'm an AI assistant."
+      }
+    }
+  ]
+}

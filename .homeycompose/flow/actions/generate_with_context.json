@@ -1,0 +1,60 @@
+{
+  "title": {
+    "en": "Generate text with context"
+  },
+  "titleFormatted": {
+    "en": "Generate text with [[model]] using context [[system_prompt]] and prompt [[prompt]]"
+  },
+  "hint": {
+    "en": "Generate text with a system prompt for context (e.g., 'You are a helpful home assistant'). The result is available as a token."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "driver_id=openrouter"
+    },
+    {
+      "type": "autocomplete",
+      "name": "model",
+      "title": {
+        "en": "Model"
+      },
+      "placeholder": {
+        "en": "Search for a model..."
+      }
+    },
+    {
+      "type": "text",
+      "name": "system_prompt",
+      "title": {
+        "en": "Context / System Prompt"
+      },
+      "placeholder": {
+        "en": "You are a friendly home assistant..."
+      }
+    },
+    {
+      "type": "text",
+      "name": "prompt",
+      "title": {
+        "en": "Prompt"
+      },
+      "placeholder": {
+        "en": "Enter your prompt here..."
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "name": "response",
+      "type": "string",
+      "title": {
+        "en": "Response"
+      },
+      "example": {
+        "en": "Hello! I'm an AI assistant."
+      }
+    }
+  ]
+}
