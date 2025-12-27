@@ -1,6 +1,6 @@
 {
   "id": "be.titansofindustry.openrouter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=12.4.0",
   "sdk": 3,
   "platforms": [
@@ -27,8 +27,15 @@
   },
   "brandColor": "#6366F1",
   "source": "https://github.com/timbroddin/homey-openrouter/",
-  "support": "mailto:tim@broddin.be",
+  "support": "https://github.com/TimBroddin/homey-openrouter/issues",
   "bugs": {
     "url": "https://github.com/timbroddin/homey-openrouter/issues"
+  },
+  "tags": {
+    "en": [
+      "openrouter",
+      "ai",
+      "llm"
+    ]
   }
 }
